@@ -15,6 +15,9 @@
   },
   "dependencies": {
     "api-problem": "^7.0.3",
+    "auto-bind": "^4.0.0",
+    "awilix": "^7.0.3",
+    "axios": "^0.27.2",
     "express": "^4.18.1",
     "express-joi-validation": "^5.0.1",
     "helmet": "^5.1.0",
