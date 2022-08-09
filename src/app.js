@@ -9,6 +9,7 @@ import logger from './pino.setup';
 
 const app = express();
 
+// app.set('trust proxy', true);
 app.use(logger);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -16,7 +17,7 @@ app.use(helmet());
 app.use(noCacheMiddleware());
 responseBodyMiddleware(app);
 localsMiddleware(app);
-app.use('/', router);
+app.use('/v1', router);
 errorHandlerMiddleware(app);
 
 export default app;
