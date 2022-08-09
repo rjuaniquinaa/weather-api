@@ -14,4 +14,12 @@ export class WeatherController extends BindBaseController {
 
     res.json(currentWeather);
   }
+
+  async getExtendedWeather(req, res) {
+    const extendedWeather = await this.weatherService.getExtendedWeather(
+      req.params.city,
+    );
+
+    res.json(extendedWeather);
+  }
 }

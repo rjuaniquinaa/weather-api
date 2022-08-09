@@ -14,4 +14,9 @@ router
   .get(weatherController.getCurrentWeather)
   .all(methodNotAllowed);
 
+router
+  .route('/forecast/:city?')
+  .get(weatherController.getExtendedWeather)
+  .all(methodNotAllowed);
+
 export default router;
